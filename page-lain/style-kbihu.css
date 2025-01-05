@@ -1,0 +1,480 @@
+/* KBIHU Theme Colors */
+:root {
+  --kbihu-primary: hsl(35, 100%, 50%);     /* Warm orange */
+  --kbihu-primary-dark: hsl(35, 95%, 45%);
+  --kbihu-primary-light: hsl(35, 100%, 55%);
+  --kbihu-secondary: hsl(45, 100%, 50%);    /* Golden yellow */
+  --kbihu-accent: hsl(30, 40%, 25%);        /* Warm brown */
+  --kbihu-bg: hsl(40, 100%, 97%);           /* Very light warm background */
+}
+
+/* Header and Navigation Override */
+#nav-container {
+  background-color: hsla(35, 100%, 50%, 0.7);  /* Semi-transparent primary */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  #nav-container {
+    background-color: var(--kbihu-primary);  /* Solid color for mobile */
+  }
+}
+
+.menu > li > a,
+.menu > li > i {
+  color: var(--kbihu-accent) !important;
+  font-weight: 600;
+}
+
+.menu .sub-menu a,
+.menu .sub-sub-menu a {
+  font-weight: 500;
+}
+
+.header .menu .sub-sub-menu > li > a > span,
+.header .menu .sub-sub-menu li:hover span,
+.header .menu .sub-menu > li > a > span,
+.header .menu .sub-menu li:hover > a > span {
+  all: unset;
+}
+
+.menu > li > a:hover {
+  color: var(--kbihu-accent) !important;
+  opacity: 0.8;
+}
+
+.sub-menu {
+  background-color: hsla(35, 100%, 50%, 0.7);  /* Match navbar transparency */
+  /* border: 1px solid var(--kbihu-primary-dark); */
+  backdrop-filter: blur(5px);
+}
+
+.sub-menu li a {
+  color: var(--kbihu-accent) !important;
+}
+
+.sub-menu li:hover {
+  background-color: hsla(35, 100%, 50%, 0.9);  /* Slightly more opaque on hover */
+}
+
+.sub-sub-menu {
+  background-color: hsla(35, 100%, 50%, 0.7);  /* Match navbar transparency */
+  /* border: 1px solid var(--kbihu-primary-dark); */
+  backdrop-filter: blur(5px);
+}
+
+/* Ensure solid colors on mobile */
+@media screen and (max-width: 768px) {
+  .kbihu-theme .sub-menu,
+  .kbihu-theme .sub-sub-menu {
+    background-color: var(--kbihu-primary);
+  }
+}
+
+.hamburger-menu i {
+  color: var(--kbihu-accent);
+}
+
+/* Mobile Menu Override */
+.mobile-menu {
+  background-color: var(--kbihu-primary);
+}
+
+.mobile-menu a {
+  color: var(--kbihu-accent);
+}
+
+.mobile-menu .submenu {
+  background-color: var(--kbihu-secondary);
+}
+
+/* Main Content Styling */
+.kbihu-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 60px 0 150px;
+  background-color: #ffffff;
+}
+
+.kbihu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 80%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.kbihu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 80%;
+  max-width: 900px;
+  gap: 40px;
+}
+
+.container-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.container-box:hover {
+  transform: translateY(-5px);
+}
+
+.container-box h2 {
+  color: var(--kbihu-accent);
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.content-box {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.container-box p {
+  margin-bottom: 20px;
+}
+
+.vision-mission {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.section {
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--kbihu-primary);
+}
+
+.section h2 {
+  color: var(--kbihu-accent);
+  border-bottom: 3px solid var(--kbihu-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-box li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.content-box li::before {
+  content: "•";
+  color: var(--kbihu-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* H2 Slider Override */
+.h2-slider-container {
+  background-color: var(--kbihu-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.h2-slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--kbihu-primary-dark), transparent);
+  opacity: 0.1;
+}
+
+.h2-slider-text {
+  color: white;
+  /* position: relative; */
+  z-index: 1;
+}
+
+/* Footer Override */
+.kbihu-theme footer {
+  background-color: var(--kbihu-accent);
+  color: white;
+}
+
+.kbihu-theme footer a {
+  color: var(--kbihu-primary-light);
+}
+
+.kbihu-theme footer .footer-social i{
+  color: var(--kbihu-bg);
+}
+
+.kbihu-theme footer a:hover {
+  color: var(--kbihu-primary);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1200px) {
+  .kbihu-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .vision-mission {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .kbihu-theme .mobile-menu {
+    background-color: var(--kbihu-primary-light);
+  }
+  
+  .kbihu-theme .mobile-menu a {
+    color: var(--kbihu-accent);
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+/* /////////////////////// */
+/* Tentang Yayasan Section */
+/* /////////////////////// */
+
+.tentang-yayasan {
+  background: url('../image/KBIHU-Tentang.jpg') no-repeat center / cover fixed;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative; /* Menambahkan posisi relatif untuk konteks */
+}
+
+.tentang-yayasan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.content-overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; /* Mengatur menjadi flex column */
+  height: min-content;
+  width: 35%;
+  margin: 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+  gap: 20px;
+}
+
+.content-overlay2 {
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  border-radius: 15px;
+  height: min-content;
+  max-width: 90%;
+  width: 40%;
+  /* margin: 20px; */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); */
+  z-index: 2;
+  position: relative;
+}
+
+.content-overlay h2 {
+  color: var(--kbihu-accent);;
+  text-align: center;
+}
+
+.content-overlay p {
+  text-align: center;
+  margin: 0 5%;
+}
+
+.content-overlay li {
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 840px) {
+
+  .tentang-yayasan{
+    flex-direction: column;
+    height: min-content;
+    gap: 30px;
+    padding: 30px 0
+  }
+
+  .content-overlay {
+    width: 70%;
+  }
+
+  .content-overlay li {
+    margin-left: 20px;
+  }
+
+  .content-overlay2 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 419px) {
+
+  .content-overlay {
+    width: 90%;
+  }
+
+  .content-overlay p {
+      margin: 0;
+  }
+
+  .content-overlay li {
+    margin-left: 10px;
+  }
+}
+
+.selengkapnya-link {
+  color: #007bff; /* Warna teks untuk link */
+  text-decoration: none; /* Menghapus garis bawah */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Animasi transisi warna */
+}
+
+.selengkapnya-link:hover{
+  color: #0056b3; /* Warna saat hover */
+}
+
+/* ///////////////// */
+/* Draggable Section */
+/* ///////////////// */
+
+.wrapper {
+  /* width: 90%; */
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 250px;
+  /* margin-top: 5rem; */
+  overflow: hidden;
+  /* mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  ); */
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -400px;
+  }
+}
+
+.item {
+  width: 400px;
+  height: 250px;
+  background-color: brown;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(400px * 4), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  background-image: url('./galeri-kbihu/KBIHU 1.png');
+  animation-delay: calc(30s / 4 * (4 - 1) * -1);
+}
+
+.item2 {
+  background-image: url('./galeri-kbihu/KBIHU 2.png');
+  animation-delay: calc(30s / 4 * (4 - 2) * -1);
+}
+
+.item3 {
+  background-image: url('./galeri-kbihu/KBIHU 3.png');
+  animation-delay: calc(30s / 4 * (4 - 3) * -1);
+}
+
+.item4 {
+  background-image: url('./galeri-kbihu/KBIHU 4.png');
+  animation-delay: calc(30s / 4 * (4 - 4) * -1);
+}
+
+@media (max-width: 840px) {
+  @keyframes scrollLeft {
+    to {
+      left: -300px;
+    }
+  }
+  
+  .wrapper {
+    height: 150px;
+  }
+
+  .item {
+    width: 300px;
+    height: 150px;
+    background-color: brown;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(300px * 4), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .item1 {
+    animation-delay: calc(30s / 4 * (4 - 1) * -1);
+  }
+  
+  .item2 {
+    animation-delay: calc(30s / 4 * (4 - 2) * -1);
+  }
+  
+  .item3 {
+    animation-delay: calc(30s / 4 * (4 - 3) * -1);
+  }
+  
+  .item4 {
+    animation-delay: calc(30s / 4 * (4 - 4) * -1);
+  }
+}
